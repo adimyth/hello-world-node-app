@@ -4,6 +4,7 @@ A dockerized version of "Hello World" node app
 
 ## Creating a node app
 1. package.json
+
 Adding `Express` framework as an essential node dependencies. 
 ```
 {
@@ -23,6 +24,7 @@ Adding `Express` framework as an essential node dependencies.
 Run `npm install`
 
 2. server.js
+
 Application to create a simple HTTP server that will serve our "Hello World" website on `localhost:8080`
 ```
 'use strict';
@@ -47,6 +49,7 @@ Run `node server.js` & check `localhost:8080` in your web browser, it should dis
 ## Docker container
 
 1. Creating an image
+
 This will be our app & contains all the essentials.
 ```
 # install the latest node version
@@ -68,6 +71,7 @@ EXPOSE 8080
 CMD ["node", "server.js"]
 ```
 2. Building the image
+
 Build a docker image using the above Dockerfile & name it `node-app`
 ```
 docker image build -t node-app .
